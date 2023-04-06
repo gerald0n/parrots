@@ -22,18 +22,14 @@ body {
 
 .game-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 3.4rem;
     justify-content: center;
     align-items: center;
+    padding-inline: 10rem;
 }
 
-.line {
-    display: flex;
-    gap: 3.4rem;
-    flex-wrap: wrap;
-}
 
 .card {
     width: 11.7rem;
@@ -62,18 +58,10 @@ body {
     position: absolute;
     backface-visibility: hidden;
 
-    transition: all 0.5s;
+    transition: all 1s;
     transform-style: preserve-3d;
 }
 
 .back-face {
     transform: rotateY(180deg);
-}
-
-.card:hover .back-face {
-    transform: rotateY(0deg);
-}
-
-.card:hover .front-face {
-    transform: rotateY(-180deg);
 }

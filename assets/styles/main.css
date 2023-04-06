@@ -1,0 +1,79 @@
+body {
+    width: 100%;
+    background: #eef9bf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 12.2rem;
+    padding-top: 4rem;
+}
+
+.game-title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 6.6rem;
+    letter-spacing: -0.004em;
+
+    color: #75b79e;
+    margin-bottom: 4.7rem;
+    text-align: center;
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3.4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    display: flex;
+    gap: 3.4rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 11.7rem;
+    height: 14.6rem;
+    position: relative;
+}
+
+.card img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+
+    background: #a7e9af;
+    border: 1px solid #99cea8;
+
+    border-radius: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    backface-visibility: hidden;
+
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+
+.back-face {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back-face {
+    transform: rotateY(0deg);
+}
+
+.card:hover .front-face {
+    transform: rotateY(-180deg);
+}

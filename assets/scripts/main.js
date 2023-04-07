@@ -1,123 +1,134 @@
 let cards = [
     [
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/bobrossparrot.gif" alt="">
+              <img src="./assets/images/bobrossparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`,
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/bobrossparrot.gif" alt="">
+              <img src="./assets/images/bobrossparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`
     ],
     [
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/explodyparrot.gif" alt="">
+              <img src="./assets/images/explodyparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`,
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/explodyparrot.gif" alt="">
+              <img src="./assets/images/explodyparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`
     ],
     [
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/fiestaparrot.gif" alt="">
+              <img src="./assets/images/fiestaparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`,
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/fiestaparrot.gif" alt="">
+              <img src="./assets/images/fiestaparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`
     ],
     [
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/metalparrot.gif" alt="">
+              <img src="./assets/images/metalparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`,
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/metalparrot.gif" alt="">
+              <img src="./assets/images/metalparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`
     ],
     [
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/revertitparrot.gif" alt="">
+              <img src="./assets/images/revertitparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`,
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/revertitparrot.gif" alt="">
+              <img src="./assets/images/revertitparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`
     ],
     [
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/tripletsparrot.gif" alt="">
+              <img src="./assets/images/tripletsparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`,
-        `<div class="card">
+        `<div class="card" data-test="card">
             <div class="back-face face">
-              <img src="./assets/images/tripletsparrot.gif" alt="">
+              <img src="./assets/images/tripletsparrot.gif" alt="" data-test="face-up-image">
             </div>
             <div class="front-face face">
-              <img src="./assets/images/back.png" alt="">
+              <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`
     ]
 ]
 
-const cardsContainer = document.querySelectorAll('.card')
+const container = document.querySelector('.game-content')
 let cardsSelected = []
-cardsContainer.forEach(card => {
-    card.addEventListener('click', () => {
-        if (cardsSelected.length < 2) {
-            virarCartas(card)
+// game(Number(prompt('Com quantas cartas deseja jogar?')))
+
+function game(qtdDeCartas) {
+    for (let i = 0; i < qtdDeCartas / 2; i++) {
+        for (let j = 0; j < 2; j++) {
+            container.innerHTML += cards[i][j]
         }
+    }
+
+    const cardsContainer = document.querySelectorAll('.card')
+    cardsContainer.forEach(card => {
+        card.addEventListener('click', () => {
+            if (cardsSelected.length < 2) {
+                virarCartas(card)
+            }
+        })
     })
-})
+}
 
 function virarCartas(divCurrent) {
     divCurrent.querySelector('.front-face').style.transform = 'rotateY(-180deg)'
@@ -138,18 +149,19 @@ function desvirarCartas() {
 function verificarFimDoJogo() {
     const container = Array(document.querySelector('.game-content').children)
     container.forEach(divList => {
-        if(verify(divList))
-          setTimeout(() => {
-            alert("Você ganhou o jogo!")
-          }, 600);
+        if (verificarCartasViradas(divList))
+            setTimeout(() => {
+                alert('Você ganhou o jogo!')
+            }, 600)
     })
 }
 
-function verify(divList) {
+function verificarCartasViradas(divList) {
     for (let i = divList.length - 1; i >= 0; i--) {
         if (!(divList[0].classList.value === divList[i].classList.value)) {
             return false
-        } return true
+        }
+        return true
     }
 }
 
@@ -163,8 +175,10 @@ function verificarIgualdade(cardList) {
         for (const card of cardList) {
             card.classList.add('check')
             card.classList.add('check')
+            verificarFimDoJogo()
         }
         cardsSelected = []
-        verificarFimDoJogo()
     }
 }
+
+game(Number(prompt('Com quantas cartas desejar jogar?')))

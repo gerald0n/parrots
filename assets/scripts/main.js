@@ -215,12 +215,17 @@ function verificarFimDoJogo() {
 }
 
 function verificarCartasViradas(divList) {
-    for (let i = divList.length - 1; i >= 0; i--) {
-        if (!(divList[0].classList.value === divList[i].classList.value)) {
-            return false
-        }
-        return true
-    }
+  let count = 0;
+    Array(divList).forEach(div => {
+      for(item of div) {
+        if(item.classList.contains('check'))
+          count++
+      }
+    })
+
+   return count == qtdCards
+
+   
 }
 
 function verificarIgualdade(cardList) {

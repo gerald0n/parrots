@@ -106,18 +106,43 @@ let cards = [
               <img src="./assets/images/back.png" alt="" data-test="face-down-image">
             </div>
         </div>`
+    ],
+    [
+        `<div class="card" data-test="card">
+          <div class="back-face face">
+            <img src="./assets/images/unicornparrot.gif" alt="" data-test="face-up-image">
+          </div>
+          <div class="front-face face">
+            <img src="./assets/images/back.png" alt="" data-test="face-down-image">
+          </div>
+      </div>`,
+        `<div class="card" data-test="card">
+          <div class="back-face face">
+            <img src="./assets/images/unicornparrot.gif" alt="" data-test="face-up-image">
+          </div>
+          <div class="front-face face">
+            <img src="./assets/images/back.png" alt="" data-test="face-down-image">
+          </div>
+      </div>`
     ]
 ]
 
 const container = document.querySelector('.game-content')
 let cardsSelected = []
-// game(Number(prompt('Com quantas cartas deseja jogar?')))
 
 function game(qtdDeCartas) {
+    cards.sort(comparador)
+    const cartasEmbaralhadas = []
     for (let i = 0; i < qtdDeCartas / 2; i++) {
         for (let j = 0; j < 2; j++) {
-            container.innerHTML += cards[i][j]
+            cartasEmbaralhadas.push(cards[i][j])
         }
+    }
+
+    cartasEmbaralhadas.sort(comparador)
+
+    for (let i = 0; i < qtdDeCartas; i++) {
+        container.innerHTML += cartasEmbaralhadas[i]
     }
 
     const cardsContainer = document.querySelectorAll('.card')
@@ -128,6 +153,10 @@ function game(qtdDeCartas) {
             }
         })
     })
+}
+
+function comparador() {
+    return Math.random() - 0.5
 }
 
 function virarCartas(divCurrent) {
@@ -181,4 +210,11 @@ function verificarIgualdade(cardList) {
     }
 }
 
-game(Number(prompt('Com quantas cartas desejar jogar?')))
+let qtdCards = prompt('Com quantas cartas desejar jogar?')
+
+if (qtdCards != null) {
+    while (qtdCards < 4 || qtdCards > 14 || qtdCards % 2 === 1) {
+        qtdCards = prompt('Com quantas cartas desejar jogar?')
+    }
+    game(Number(qtdCards))
+}

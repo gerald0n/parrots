@@ -8,6 +8,28 @@ body {
     padding-top: 4rem;
 }
 
+* {
+    font-family: 'Roboto';
+}
+
+.timer {
+    width: 6rem;
+    height: 5rem;
+    background: #4a7766;
+    color: #eef9bf;
+    font-size: 2rem;
+
+    position: fixed;
+    border-radius: 50% 0 0;
+    border-bottom-left-radius: 50%;
+    right: 0;
+    top: 4.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .game-title {
     font-family: 'Roboto';
     font-weight: 700;
@@ -29,7 +51,6 @@ body {
     align-items: center;
     padding-inline: 10rem;
 }
-
 
 .card {
     width: 11.7rem;

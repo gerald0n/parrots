@@ -128,11 +128,18 @@ let cards = [
 ]
 let qtdCards = prompt('Com quantas cartas desejar jogar?')
 const container = document.querySelector('.game-content') //container reservado para inserção de das cartas
+const timer = document.querySelector('.timer')
+
 let cardsSelected = []
 let contadorDeClicks = 0
+let interval
 
 function game(qtdDeCartas) {
     container.innerHTML = ''
+    timer.innerText = 0
+    interval = setInterval(() => {
+        timer.innerText++
+    }, 1000)
 
     cards.sort(comparador)
     cards.sort(comparador)
@@ -189,7 +196,9 @@ function verificarFimDoJogo() {
     container.forEach(divList => {
         if (verificarCartasViradas(divList))
             setTimeout(() => {
-                alert(`Você ganhou o jogo em ${contadorDeClicks} jogadas!`)
+                alert(
+                    `Você ganhou o jogo em ${contadorDeClicks} jogadas! A duração do jogo foi de ${timer.textContent} segundos!`
+                )
                 if (
                     prompt('Deseja reiniciar o jogo?').toLowerCase() === 'sim'
                 ) {
@@ -204,10 +213,11 @@ function verificarFimDoJogo() {
                                 'Com quantas cartas desejar jogar?'
                             )
                         }
-
+                        clearInterval(interval)
                         game(Number(qtdCards))
                     }
                 } else {
+                    clearInterval(interval)
                     return
                 }
             }, 600)
@@ -215,17 +225,14 @@ function verificarFimDoJogo() {
 }
 
 function verificarCartasViradas(divList) {
-  let count = 0;
+    let count = 0
     Array(divList).forEach(div => {
-      for(item of div) {
-        if(item.classList.contains('check'))
-          count++
-      }
+        for (item of div) {
+            if (item.classList.contains('check')) count++
+        }
     })
 
-   return count == qtdCards
-
-   
+    return count == qtdCards
 }
 
 function verificarIgualdade(cardList) {

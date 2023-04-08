@@ -197,10 +197,12 @@ function verificarFimDoJogo() {
         if (verificarCartasViradas(divList))
             setTimeout(() => {
                 alert(
-                    `Você ganhou o jogo em ${contadorDeClicks} jogadas! A duração do jogo foi de ${timer.textContent} segundos!`
+                    `Você ganhou em ${contadorDeClicks} jogadas! A duração do jogo foi de ${timer.textContent} segundos!`
                 )
                 if (
-                    prompt('Deseja reiniciar o jogo?').toLowerCase() === 'sim'
+                    prompt(
+                        'Você gostaria de reiniciar a partida? (sim ou não)'
+                    ).toLowerCase() === 'sim'
                 ) {
                     qtdCards = prompt('Com quantas cartas desejar jogar?')
                     if (qtdCards != null) {

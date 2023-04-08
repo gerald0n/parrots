@@ -6,11 +6,9 @@ body {
     align-items: center;
     padding-inline: 12.2rem;
     padding-top: 4rem;
-}
-
-* {
     font-family: 'Roboto';
 }
+
 
 .timer {
     width: 6rem;
@@ -31,7 +29,6 @@ body {
 }
 
 .game-title {
-    font-family: 'Roboto';
     font-weight: 700;
     font-size: 5.6rem;
     line-height: 6.6rem;

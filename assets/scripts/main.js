@@ -126,17 +126,20 @@ let cards = [
       </div>`
     ]
 ]
+
 let qtdCards = prompt('Com quantas cartas desejar jogar?')
 const container = document.querySelector('.game-content') //container reservado para inserção de das cartas
 const timer = document.querySelector('.timer')
 
 let cardsSelected = []
-let contadorDeClicks = 0
+let contadorDeClicks
 let interval
 
 function game(qtdDeCartas) {
     container.innerHTML = ''
     timer.innerText = 0
+    contadorDeClicks = 0
+
     interval = setInterval(() => {
         timer.innerText++
     }, 1000)
@@ -199,11 +202,11 @@ function verificarFimDoJogo() {
                 alert(
                     `Você ganhou em ${contadorDeClicks} jogadas! A duração do jogo foi de ${timer.textContent} segundos!`
                 )
-                if (
-                    prompt(
-                        'Você gostaria de reiniciar a partida? (sim ou não)'
-                    ).toLowerCase() === 'sim'
-                ) {
+                let boolReset = prompt(
+                    'Você gostaria de reiniciar a partida? (sim ou não)'
+                )
+
+                if (boolReset === 'sim') {
                     qtdCards = prompt('Com quantas cartas desejar jogar?')
                     if (qtdCards != null) {
                         while (

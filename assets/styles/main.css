@@ -9,7 +9,6 @@ body {
     font-family: 'Roboto';
 }
 
-
 .timer {
     width: 6rem;
     height: 5rem;
@@ -76,10 +75,8 @@ body {
     position: absolute;
     backface-visibility: hidden;
 
-    transition: all 1s;
+    transition: all 0.5s;
     transform-style: preserve-3d;
-
-    
 }
 
 .back-face {
